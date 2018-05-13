@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>auto-fit and auto-fill</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+
+    <div class="container1">
+      <div class="box">l1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+
+    <style>
+      .box {
+        background-color: #4444;
+      }
+      .container {
+        display: grid;
+        grid-gap: 20px;
+        border: 10px solid red;
+        grid-template-columns: repeat(auto-fit, 350px);
+        justify-items: end;
+      }
+
+      .container1 {
+        display: grid;
+        grid-gap: 20px;
+        border: 10px solid blue;
+        grid-template-columns: repeat(auto-fill, 350px);
+        justify-items: start;
+      }
+    </style>
+  </body>
+</html>
